@@ -1,0 +1,1 @@
+#este archivo contiene las rutas correspondientes al administrador (requerimientos funcionales)

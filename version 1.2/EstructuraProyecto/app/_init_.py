@@ -1,0 +1,1 @@
+#este archivo es un estilo de conector que ayuda a facilitar los procesos del aplicativo
