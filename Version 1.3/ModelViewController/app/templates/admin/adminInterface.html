@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/admin/adminInterfaceStyles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main/footer.css') }}">
+    <title>Interfaz principal</title>
+</head>
+<body>
+
+ <div class="wrapper">
+  <header> 
+    <div class = "cabecero">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <img src="{{ url_for('static', filename='uploads/main/header/whitemindsetlogo.png') }}" alt="">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <div class="NavigationButtom">
+                            <a class="nav-link" href="/Views/">Inicio</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="NavigationButtom">
+                            <a class="nav-link" href="/Views/Interface/UserInterface.html">Tu Interfaz</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="NavigationButtom">
+                            <a class="nav-link" href="/Views/mindset_actualizado/Frontend_isaura/indexseguimiento.html">Tu Progreso</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="NavigationButtom">
+                            <a class="nav-link" href="/Views/minset/index.html">Pausas Activas</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="NavigationButtom">
+                            <a class="nav-link" href="/Views/mindset_actualizado/Frontend_isaura/indexnotificaciones.html">Tus Recordatorios</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="NavigationButtom">
+                            <a class="nav-link" href="/Views/InitialData/FormInitialData.html">Tus Datos Físicos</a>
+                        </div>
+                    </li>
+
+
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                </div>
+            </div>
+        </nav>
+  </div>
+
+
+
+  </header>
+
+  <main class="container my-5">
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+    <div class="card">
+      <img src="{{ url_for ('static', filename = 'uploads/admin/adminInterface/manageUsers.avif')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Usuarios Mindset</h5>
+        <p class="card-text">Consulta y gestiona todos los usuarios registrados</p>
+            <a href="{{ url_for ('adminDb.see_users')}}" class="btn btn-primary">¡Vamos!</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="/Views/Interface/Media/Reminders.webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Tus recordatorios (notificaciones)</h5>
+        <p class="card-text">Mantente en sintonía con tus objetivos. Aquí encontrarás todos tus recordatorios para que nada se te escape.</p>
+            <a href="#" class="btn btn-primary">¡Vamos!</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="/Views/Interface/Media/ActivePauses.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Tus pausas activas</h5>
+        <p class="card-text">Recarga tu energía y mejora tu bienestar con momentos de movimiento y relajación. ¡Tu cuerpo y mente te lo agradecerán!</p>
+            <a href="#" class="btn btn-primary">¡Vamos!</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="/Views/Interface/Media/PhysicalData.avif" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Tus Mediciones</h5>
+        <p class="card-text">Conoce tus avances con datos precisos. Analiza, ajusta y optimiza tu rendimiento para alcanzar lo mejor de ti mismo.</p>
+            <a href="#" class="btn btn-primary">¡Vamos!</a>
+      </div>
+    </div>
+  </div>
+</div>
+  </main>
+
+    <footer>
+      <div class="container text-center footer-container">
+        <div class="row header-signature">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col-end">Mindset © 2025</div>
+        </div>
+      </div>
+  </footer>
+</body>
+<script src = "{{ url_for('static', filename = 'js/bootstrap.min.js') }} "></script>
+</html>

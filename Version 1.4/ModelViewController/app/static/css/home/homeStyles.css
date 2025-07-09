@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --primary: #1e1e22;
+    --secondary: #ebedf7;
+    --terciary: #409bf0;
+    --fourth: #73b4e9;
+    --fifth: #b46ec5;
+}
+
+body{
+  background-color: var(--fourth);
+}
+
+
+/* Contenedor principal */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Contenido crece según necesidad */
+main {
+  flex: 1;
+  padding: 4%;
+}
+
+.mindset-presentation{
+  background-color: var(--secondary) !important;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.logo-and-greeting{
+  background-color: var(--secondary);
+  display: flex;
+  flex-direction: column; 
+  align-items: center;     
+  justify-content: center; 
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+}
+
+
+.logo-and-greeting img{
+  max-width: 40%;
+}
+
+.presentation{
+  display: flex;
+  text-align: center !important;
+  margin-top: 15px;
+}
+
+.presentation-container{
+  background-color: var(--primary) !important;
+}
+
+.presentation p{
+  font-size: 20px;
+  color: white;
+}
+
+.message{
+  background-color: var(--secondary);
+  font-size: 25px;
+  border: solid 5px var(--primary);
+}
+
+.message p{
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.registerButtom{
+  background-color: var(--primary) !important;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;     
+  justify-content: center; 
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  color: white;
+}
+
+.register-card{
+  background-color: var(--fourth);
+  padding: 70px;
+}
+
+.registerBtn{
+  background-color: var(--primary);
+  border: solid black !important;
+}
+
+.registerBtn:hover{
+  background-color: var(--fifth) !important;
+  border: solid 2px var(--primary) !important;
+}
+
+.logInButtom{
+  background-color: var(--secondary) !important;
+  border: solid 2px var(--primary);
+  display: flex;
+  flex-direction: column; 
+  align-items: center;     
+  justify-content: center; 
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  color: black;
+}
+
+.logIn-card{
+  background-color: var(--fifth);
+  padding: 70px;
+}
+
+.logInPicture img{
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logInBtn{
+  background-color: var(--primary) !important;
+  border: solid black !important;
+}
+
+.logInBtn:hover{
+  background-color: var(--terciary) !important;
+  border: solid 2px var(--primary) !important;
+}
+
+
+
+

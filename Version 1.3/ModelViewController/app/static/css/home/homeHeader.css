@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --primary: #1e1e22;
+    --secondary: #ebedf7;
+    --terciary: #409bf0;
+    --fourth: #73b4e9;
+    --fifth: #b46ec5;
+}
+
+header {
+  background-color: var(--primary) !important;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.logo img{
+    max-width: 40%;
+}
+
+.header-container{
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.header-row{
+    width: 100%;
+}
+
+.header-logo img{
+    max-width: 60%;
+}

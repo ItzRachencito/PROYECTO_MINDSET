@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/user/InitialData/FormInitialDataStyles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main/footer.css') }}">
+    <title>Datos Iniciales</title>
+</head>
+<body>
+
+
+
+
+
+<div class="wrapper">
+  <header>
+    <div class = "cabecero">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <img src="{{ url_for('static', filename='uploads/main/header/whitemindsetlogo.png') }}" alt="">
+
+
+            </div>
+        </nav>
+  </div>
+             
+
+
+  </header>
+
+  <main class="container my-5">
+    <form class="row g-3" method="post" action = "{{url_for('userData.initialDataForm')}}">
+  <div class="col-md-6">
+    <label for="profileJobStartTime" class="form-label">¿A qué hora empieza tu jordana laboral?</label>
+    <input type="time" class="form-control" id="profileJobStartTime" name="profileJobStartTime"required>
+  </div>
+  <div class="col-md-6">
+    <label for="profileJobEndTime" class="form-label">¿A qué hora finaliza tu jornada laboral?</label>
+    <input type="time" class="form-control" id="profileJobEndTime" name = "profileJobEndTime" required>
+  </div>
+
+    <div class="col-md-6">
+    <label for="profileDailyFreeMinutes" class="form-label">¿Cuántos tiempo libre en promedio tienes al día? (minutos)</label>
+    <input type = "number" class = "form-control" id = "profileDailyFreeMinutes" name = "profileDailyFreeMinutes" required>
+  </div>
+    <div class="col-md-6">
+    <label for="profileCurrentDiet" class="form-label">¿Qué tipo de dieta consideras que sigues actualmente? </label>
+    <select id="profileCurrentDiet" class="form-select" name="profileCurrentDiet" required>
+        <option selected>...</option>
+        <option value = "Regular">Regular</option>
+        <option value = "Ganar peso">Ganar peso</option>
+        <option value = "Perder peso">Perder peso</option>
+    </select>
+  </div>
+
+    <div class="col-md-6">
+    <label for="profileDailyFoodsAverage" class="form-label">¿Cuántas comidas sueles tener al día?</label>
+    <input type = "number" class = "form-control" id = "profileDailyFoodsAverage" name = "profileDailyFoodsAverage" required>
+  </div>
+
+<div class="col-md-6">
+    <label for="profileEstimatedDailyWaterLitres" class="form-label">¿Qué cantidad de agua en promedio bebes al día? (litros)</label>
+    <input type = "number" class = "form-control" id = "profileEstimatedDailyWaterLitres" name = "profileEstimatedDailyWaterLitres" step = "0.1" required>
+  </div>
+<div class="col-md-6">
+    <label for="profileSleepTimeAverage" class="form-label">¿Cuánto tiempo sueles dormir al día? (horas)</label>
+    <input type = "number" class = "form-control" id = "profileSleepTimeAverage" name = "profileSleepTimeAverage" step = "0.1" required>
+  </div>
+ 
+    <div class="col-md-6">
+    <label for="profileCurrentPhysicStatus" class="form-label">¿Cómo consideras tu estado físico actual? </label>
+    <select id="profileCurrentPhysicStatus" class="form-select" name="profileCurrentPhysicStatus" required>
+        <option selected>...</option>
+        <option value = "Principiante">Principiante</option>
+        <option value = "Intermedio">Intermedio</option>
+        <option value = "Avanzado">Avanzado</option>
+    </select>
+  </div>
+
+    <div class="col-md-6">
+    <label for="profileExerciseSessionsFrecuencyWeekly" class="form-label">¿Cuántas sesiones de ejercicio sueles practicar? (semanalmente)</label>
+    <input type = "number" class = "form-control" id = "profileExerciseSessionsFrecuencyWeekly" name = "profileExerciseSessionsFrecuencyWeekly" required>
+  </div>
+
+    <div class="col-md-6">
+    <label for="profileFavoriteExerciseType" class="form-label">¿Qué tipo de ejercicio consideras como tu favorito? </label>
+    <select id="profileFavoriteExerciseType" class="form-select" name="profileFavoriteExerciseType" required>
+        <option selected>...</option>
+        <option value = "Relajacion">Relajacion</option>
+        <option value = "Fuerza">Fuerza</option>
+        <option value = "Cardio">Cardio</option>
+        <option value = "Otro">Otro</option>
+    </select>
+  </div>
+
+    <div class="col-md-6">
+    <label for="profileScreenTimeAverage" class="form-label">¿Cuánto tiempo sueles estar frente a pantallas al día? (minutos)</label>
+    <input type = "number" class = "form-control" id = "profileScreenTimeAverage" name = "profileScreenTimeAverage" required>
+  </div>
+
+    <div class="col-md-6">
+    <label for="idUserSex" class="form-label">¿Cuál es tu sexo?</label>
+    <select id="idUserSex" class="form-select" name="idUserSex" required>
+        <option selected>...</option>
+        <option value = "1">Masculino</option>
+        <option value = "2">Femenino</option>
+    </select>
+  </div>
+
+    <div class="col-md-12">
+        <label for="profileStressScale" class="form-label">¿Cómo consideras tu nivel de estrés? (menos estrés -- mayor estrés)</label>
+        <input type="range" class="form-range" min="0" max="10" id="profileStressScale" name="profileStressScale" required>
+    </div>
+
+    
+
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck" required>
+          <label class="form-check-label" for="gridCheck">
+            Autorizo el uso de mis datos
+          </label>
+        </div>
+      </div>
+      <div class="col-12 signUp-btn">
+        <button type="submit" class="btn btn-primary signUp-buttom">Actualizar mis datos</button>
+      </div>
+</form>
+
+  </main>
+  <footer>
+      <div class="container text-center footer-container">
+        <div class="row header-signature">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col-end">Mindset © 2025</div>
+        </div>
+      </div>
+  </footer>
+</div>
+
+
+</body>
+<script src = "{{ url_for('static', filename = 'js/bootstrap.min.js') }} "></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

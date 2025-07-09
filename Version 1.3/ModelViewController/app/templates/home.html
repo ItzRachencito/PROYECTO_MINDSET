@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida a Mindset</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/home/homeHeader.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main/footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/home/homeStyles.css') }}">
+</head>
+<body>
+
+<div class="wrapper">
+  <header>
+      <div class="container text-center header-container">
+        <div class="row header-row">
+          <div class="col-md-4 col-sm-12 header-logo">
+            <img src="{{ url_for('static', filename='uploads/main/header/whitemindsetlogo.png') }}" alt="">
+          </div>
+          <div class="col">
+
+          </div>
+          <div class="col">
+
+          </div>
+        </div>
+      </div>             
+
+
+  </header>
+  
+  <main>
+    
+    <div class=" row mindset-presentation">
+        <div class="col-md-6 logo-and-greeting">
+            <p1>Bienvenidos a</p1>
+            <img src="{{ url_for('static', filename='uploads/main/logo/blackmindsetlogo.png') }}" alt="">          
+        </div>
+        <div class="col-md-6 presentation-container">
+          <div class="container text-center presentation">
+            <p> Mindset es un aplicativo que ayuda al usuario a mejorar su salud y bienestar tanto físico como mental</p>
+          </div>
+        </div>
+        <div class="col-md-12 col-sm-12 message">
+          <p>Únete a mindset y comienza tu camino hacia el bienestar y la superación personal</p>
+          <div class="row">
+            <div class="col-md-6 col-sm-12 registerButtom">
+              <div class="card mb-3 register-card" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-6 col-sm-2">
+                    <img src="{{ url_for('static', filename='uploads/home/registerHome.webp') }}" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <h3 class="card-title">¿Aún no eres miembro?</h3>
+                      <a href="{{ url_for ('userAuth.register')}}" class="btn btn-primary registerBtn">¡Regístrate ahora!</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12 logInButtom ">
+              <div class="card mb-3 logIn-card" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-6 col-sm-2 logInPicture">
+                    <img src="{{ url_for('static', filename='uploads/home/logInHome.png') }}" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <h3 class="card-title">¿Ya eres miembro Mindset?</h3>
+                      <a href="{{ url_for ('userAuth.logIn')}}" class="btn btn-primary logInBtn">¡Inicia sesión!</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+  </main>
+  
+  <footer>
+      <div class="container text-center footer-container">
+        <div class="row header-signature">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col-end">Mindset © 2025</div>
+        </div>
+      </div>
+  </footer>
+</div>
+
+</body>
+<script src = "{{ url_for('static', filename = 'js/bootstrap.min.js') }} "></script>
+</html>

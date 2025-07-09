@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Datos Iniciales</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/home/homeHeader.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main/footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/auth/registerStyles.css') }}">
+</head>
+<body>
+<div class="wrapper">
+  <header>
+      <div class="container text-center header-container">
+        <div class="row header-row">
+          <div class="col-md-4 col-sm-12 header-logo">
+            <img src="{{ url_for('static', filename='uploads/main/header/whitemindsetlogo.png') }}" alt="">
+          </div>
+          <div class="col">
+
+          </div>
+          <div class="col">
+
+          </div>
+        </div>
+      </div>             
+
+
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-5">
+        <div class="card shadow">
+          <div class="card-body">
+            <h2 class="text-center mb-4">Crea tu cuenta Mindset ahora mismo</h2>
+            <form class="row g-3" method="post" action="{{ url_for('userAuth.register')}}" enctype="multipart/form-data">
+      <div class="col-md-6">
+        <label for="userFistName" class="form-label">Primer Nombre*</label>
+        <input type="text" class="form-control" id="userFirstName" name="userFirstName" placeholder="Obligatorio" required>
+      </div>
+      <div class="col-md-6">
+        <label for="UserSecondName" class="form-label">Segundo Nombre</label>
+        <input type="text" class="form-control" id="userSecondName" name="userSecondName">
+      </div>
+
+      <div class="col-md-6">
+        <label for="userFirstLastName" class="form-label">Primer Apellido*</label>
+        <input type="text" class="form-control" id="userFirstLastName" name="userFirstLastName" placeholder="Obligatorio" required>
+      </div>
+      <div class="col-md-6">
+        <label for="userSecondLastName" class="form-label">Segundo Apellido</label>
+        <input type="text" class="form-control" id="userSecondLastName" name="userSecondLastName">
+      </div>
+      <div class="col-md-12">
+        <label for="userBirthDate" class="form-label">Fecha de nacimiento</label>
+        <input type="date" class="form-control" id="userBirthDate" name="userBirthDate" required>
+      </div>
+
+
+
+      <div class="col-12">
+        <label for="userEmail" class="form-label">Correo Electrónico*</label>
+        <input type="email" class="form-control" id="userEmail" name = "userEmail" placeholder="emailExample@123.net" required>
+      </div>
+      <div class="col-12">
+        <label for="userPassword" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="userPassword" name = "userPassword" placeholder="Esta contraseña la utilizarás siempre que ingreses a Mindset" required>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck" required>
+          <label class="form-check-label" for="gridCheck">
+            Autorizo el uso de mis datos
+          </label>
+        </div>
+      </div>
+      <div class="col-12 signUp-btn">
+        <button type="submit" class="btn btn-primary signUp-buttom">Registrarme</button>
+      </div>
+</form>
+            <div class="text-center mt-3 logIn-btn">
+              <a href="{{ url_for ('userAuth.logIn')}}" class="text-decoration-none">¿Ya tienes una cuenta? ¡Inicia sesión aquí!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+      <div class="container text-center footer-container">
+        <div class="row header-signature">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col-end">Mindset © 2025</div>
+        </div>
+      </div>
+  </footer>
+</div>
+
+</body>
+<script src = "{{ url_for('static', filename = 'js/bootstrap.min.js') }} "></script>
+</html>

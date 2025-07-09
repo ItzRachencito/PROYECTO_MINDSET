@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Docs/CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="/MainCSS/header.css">
+    <link rel="stylesheet" href="/Views/mindset_actualizado/Frontend_isaura/actividad isaura/css/style.css">
+    <title>Datos Iniciales</title>
+</head>
+<body>
+    <!-- Header -->
+    <div class = "cabecero">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <img src="/Media/WhiteMindsetLogo.png" alt="">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <div class="NavigationButtom">
+                            <a class="nav-link" href="/Views/">Inicio</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="NavigationButtom">
+                            <a class="nav-link" href="/Views/Interface/UserInterface.html">Tu Interfaz</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="NavigationButtom">
+                            <a class="nav-link" href="/Views/mindset_actualizado/Frontend_isaura/indexseguimiento.html">Tu Progreso</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="NavigationButtom">
+                            <a class="nav-link" href="/Views/minset/index.html">Pausas Activas</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="NavigationButtom">
+                            <a class="nav-link" href="/Views/mindset_actualizado/Frontend_isaura/indexnotificaciones.html">Tus Recordatorios</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="NavigationButtom">
+                            <a class="nav-link" href="/Views/InitialData/FormInitialData.html">Tus Datos Físicos</a>
+                        </div>
+                    </li>
+
+
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                </div>
+            </div>
+        </nav>
+  </div>
+
+    <!-- Notificaciones de Ejercicio -->
+    <section id="notificaciones" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-4 text-primary">Notificaciones de Ejercicio</h2>
+            <p class="text-center mb-5 fs-5 text-secondary">
+                Mantente al día con tus recordatorios, logros y sugerencias personalizadas para mejorar tu rutina de ejercicios.
+            </p>
+            <div class="row g-4 justify-content-center">
+                <!-- Notificación 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-start border-4 border-primary">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary"><span class="me-2">&#9200;</span>¡Hora de entrenar!</h5>
+                            <p class="card-text text-secondary">Recuerda que hoy tienes programada tu rutina de pierna. ¡No la dejes pasar!</p>
+                            <span class="badge bg-primary">Hoy, 18:00</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Notificación 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-start border-4 border-success">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-success"><span class="me-2">&#127942;</span>¡Logro desbloqueado!</h5>
+                            <p class="card-text text-secondary">Completaste 5 entrenamientos esta semana. ¡Sigue así!</p>
+                            <span class="badge bg-success">Esta semana</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Notificación 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-start border-4 border-warning">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-warning"><span class="me-2">&#9888;&#65039;</span>¡No olvides hidratarte!</h5>
+                            <p class="card-text text-secondary">Recuerda tomar agua antes, durante y después de tu entrenamiento.</p>
+                            <span class="badge bg-warning text-dark">Consejo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Más notificaciones -->
+            <div class="row mt-5 justify-content-center">
+                <div class="col-md-8">
+                    <div class="bg-white rounded-4 shadow-sm p-4">
+                        <h5 class="fw-bold mb-3 text-primary">Historial de Notificaciones</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">✔️ Finalizaste tu rutina de espalda - 10/06/2025</li>
+                            <li class="list-group-item">✔️ Nuevo récord: 30 flexiones seguidas - 08/06/2025</li>
+                            <li class="list-group-item">⏰ Recuerda tu rutina de cardio - 07/06/2025</li>
+                            <li class="list-group-item">✔️ Completaste tu meta semanal - 05/06/2025</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0 fw-semibold">Mindset &copy; 2025</p>
+            <div class="d-flex justify-content-center gap-3 mt-2">
+                <a href="#" class="text-white text-decoration-none">Facebook</a>
+                <a href="#" class="text-white text-decoration-none">Instagram</a>
+                <a href="#" class="text-white text-decoration-none">Twitter</a>
+                <a href="#" class="text-white text-decoration-none">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

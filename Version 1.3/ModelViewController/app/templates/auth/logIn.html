@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos Iniciales</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/home/homeHeader.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main/footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/auth/logInStyles.css') }}">
+</head>
+<body>
+
+<div class="wrapper">
+  <header>
+      <div class="container text-center header-container">
+        <div class="row header-row">
+          <div class="col-md-4 col-sm-12 header-logo">
+            <img src="{{ url_for('static', filename='uploads/main/header/whitemindsetlogo.png') }}" alt="">
+          </div>
+          <div class="col">
+
+          </div>
+          <div class="col">
+
+          </div>
+        </div>
+      </div>             
+
+
+  </header>
+
+  <main class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-5">
+        <div class="card shadow">
+          <div class="card-body">
+            <h2 class="text-center mb-4">Inicia sesión con tu cuenta Mindset</h2>
+            <form method="POST" action="{{ url_for('userAuth.logIn')}}">
+              <div class="mb-3">
+                <label for="userEmail" class="form-label">Correo Electronico</label>
+                <input type="email" class="form-control" id="userEmail" name="userEmail" placeholder="" required>
+              </div>
+              <div class="mb-3">
+                <label for="userPassword" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="userPassword" name="userPassword" placeholder="" required>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100 logInButtom">Iniciar Sesión <link rel="stylesheet" href=""></button>
+            </form>
+            <div class="text-center mt-3  signUp-btn">
+              <a href="{{ url_for ('userAuth.register')}}" class="text-decoration-none">¿No tienes una cuenta? ¡Crea tu cuenta aquí!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+      <div class="container text-center footer-container">
+        <div class="row header-signature">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col-end">Mindset © 2025</div>
+        </div>
+      </div>
+  </footer>
+</div>
+
+</body>
+<script src = "{{ url_for('static', filename = 'js/bootstrap.min.js') }} "></script>
+</html>

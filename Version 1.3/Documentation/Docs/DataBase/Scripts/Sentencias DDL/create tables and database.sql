@@ -1,38 +1,23 @@
-drop database mindset;
-
-create database mindset;
+create database MINDSET;
 
 use MINDSET;
 
-create table role(
-	idRole int auto_increment primary key,
-    roleName varchar(50) not null unique,
-    roleDescription text
-);
-
-create table userGenre(
-	idUserGenre int auto_increment primary key,
-	userGenreName varchar(50) not null unique,
-    userGenreDescription text
-);
-
 create table user (
     idUser int primary key auto_increment not null unique,
+    userRole enum('Usuario', 'Administrador') not null,
     userFirstName varchar(20) not null,
     userSecondName varchar(20),
     userFirstLastName varchar(20) not null,
     userSecondLastName varchar(20),
-    userBirthDate date ,
-    userGender enum('Masculino', 'Femenino', 'Otro') ,
+    userBirthDate date not null,
+    userGender enum('Masculino', 'Femenino', 'Otro') not null,
     userEmail varchar(100) unique not null,
     userPassword varchar(20) not null,
-    userSignUpDate date ,
-    userSignOutDate datetime ,
-    userAccountStatus enum('Activa', 'Inactiva'),
-    role_idRole int,
-    foreign key (role_idRole) references role(idRole)
+    userSignUpDate date not null,
+    userSignOutDate datetime not null,
+    userAccountStatus enum('Activa', 'Inactiva')
+    
 );
-
 
 create table goal (
     idGoal int primary key auto_increment not null unique,
@@ -365,12 +350,6 @@ CREATE TABLE user_has_reminder (
     FOREIGN KEY (idReminder) REFERENCES reminder(idReminder)
         ON DELETE CASCADE ON UPDATE CASCADE
 );
-
-
-insert into role (roleName) values ('Administrador'),('Usuario');
-
-insert into userGenre (userGenreName) values ('Masculino'),('Femenino');
-
 
 
 

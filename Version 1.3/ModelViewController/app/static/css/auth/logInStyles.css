@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --primary: #1e1e22;
+    --secondary: #ebedf7;
+    --terciary: #409bf0;
+    --fourth: #73b4e9;
+    --fifth: #b46ec5;
+}
+
+body{
+  background-color: var(--fourth);
+}
+
+.card-body{
+  background-color: var(--secondary);
+  padding: 40px;
+}
+
+/* Contenedor principal */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: 4%;
+}
+
+.logInButtom{
+  background-color: var(--primary) !important;
+  border: 2px solid var(--primary) !important;
+}
+
+.logInButtom:hover{
+  background-color: var(--terciary) !important;
+  border : 2px solid var(--primary) !important;
+}
+
+.signUp-btn a{
+  color: var(--fifth) !important;
+}

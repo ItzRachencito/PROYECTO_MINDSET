@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --primary: #1e1e22;
+    --secondary: #ebedf7;
+    --terciary: #409bf0;
+    --fourth: #73b4e9;
+    --fifth: #b46ec5;
+}
+
+body{
+    background-color: var(--fourth);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: 1%;
+}
+
+
+.card img{
+    max-height: 500px;
+}
+
+.card{
+    background-color: var(--primary) !important;
+    color: var(--secondary);
+    border: solid var(--primary) 5px;
+    border-radius: 5px;
+}
