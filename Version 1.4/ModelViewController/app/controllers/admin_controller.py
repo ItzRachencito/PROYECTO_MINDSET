@@ -17,3 +17,7 @@ def see_users():
 
     return render_template('admin/manageUsers/manageMindsetUsers.html', users = users)
 
+
+@adminDb.route('/content')
+def manage_content():
+    return render_template('admin/manageGoals.html')

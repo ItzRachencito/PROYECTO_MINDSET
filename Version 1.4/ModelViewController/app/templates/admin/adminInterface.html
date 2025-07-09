@@ -26,32 +26,17 @@
 
                     <li class="nav-item">
                         <div class="NavigationButtom">
-                            <a class="nav-link" href="/Views/">Inicio</a>
+                            <a class="nav-link" href="{{ url_for ('adminDb.dashboard') }}">Inicio Administrador</a>
                         </div>
                     </li>
                     <li class="nav-item">
                         <div class="NavigationButtom">
-                            <a class="nav-link" href="/Views/Interface/UserInterface.html">Tu Interfaz</a>
+                            <a class="nav-link" href="{{ url_for ('adminDb.see_users')}}">Usuarios Mindset</a>
                         </div>
                     </li>
                     <li class="nav-item">
                         <div class="NavigationButtom">
-                            <a class="nav-link" href="/Views/mindset_actualizado/Frontend_isaura/indexseguimiento.html">Tu Progreso</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <div class="NavigationButtom">
-                            <a class="nav-link" href="/Views/minset/index.html">Pausas Activas</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <div class="NavigationButtom">
-                            <a class="nav-link" href="/Views/mindset_actualizado/Frontend_isaura/indexnotificaciones.html">Tus Recordatorios</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <div class="NavigationButtom">
-                            <a class="nav-link" href="/Views/InitialData/FormInitialData.html">Tus Datos Físicos</a>
+                            <a class="nav-link" href="{{ url_for ('adminDb.manage_content') }}">Gestión de metas</a>
                         </div>
                     </li>
 
@@ -84,31 +69,11 @@
   </div>
   <div class="col">
     <div class="card">
-      <img src="/Views/Interface/Media/Reminders.webp" class="card-img-top" alt="...">
+      <img src="{{ url_for ('static', filename = 'uploads/admin/adminInterface/goals.jpeg')}}" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Tus recordatorios (notificaciones)</h5>
-        <p class="card-text">Mantente en sintonía con tus objetivos. Aquí encontrarás todos tus recordatorios para que nada se te escape.</p>
-            <a href="#" class="btn btn-primary">¡Vamos!</a>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="/Views/Interface/Media/ActivePauses.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Tus pausas activas</h5>
-        <p class="card-text">Recarga tu energía y mejora tu bienestar con momentos de movimiento y relajación. ¡Tu cuerpo y mente te lo agradecerán!</p>
-            <a href="#" class="btn btn-primary">¡Vamos!</a>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="/Views/Interface/Media/PhysicalData.avif" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Tus Mediciones</h5>
-        <p class="card-text">Conoce tus avances con datos precisos. Analiza, ajusta y optimiza tu rendimiento para alcanzar lo mejor de ti mismo.</p>
-            <a href="#" class="btn btn-primary">¡Vamos!</a>
+        <h5 class="card-title">Gestión de Metas</h5>
+        <p class="card-text">Administra el contenido de la aplicación</p>
+            <a href="{{ url_for ('adminDb.manage_content')}}" class="btn btn-primary">¡Vamos!</a>
       </div>
     </div>
   </div>

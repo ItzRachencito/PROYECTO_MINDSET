@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename = 'css/user/stylesUserInterface.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main/header.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main/footer.css') }}">
-    <title>Interfaz principal</title>
+    <title>Tus datos</title>
 </head>
 <body>
 
@@ -65,48 +65,34 @@
   </header>
 
   <main class="container my-5">
-  <div class="row row-cols-1 row-cols-md-2 g-4">
-  <div class="col">
-    <div class="card">
-      <img src="{{ url_for('static', filename='uploads/user/userdata.avif') }}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Tu perfil Mindset</h5>
-        <p class="card-text">Tu perfil de usuario Mindset</p>
-            <a href="{{ url_for ('userDb.user_data')}}" class="btn btn-primary">¡Vamos!</a>
-      </div>
-    </div>
+  <div class="container my-5">
+    <h1 class="mb-4">Tu progreso</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Dato1</th>
+          <th>Dato2</th>
+          <th>Dato3</th>
+          <th>Dato4</th>
+          <th>Dato5</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for u in users %}
+        <tr>
+          <td>{{ u.idUser }}</td>
+          <td>
+            {{ u.userFirstName }}
+            {{ u.userFirstLastName }}
+          </td>
+          <td>{{ u.userEmail }}</td>
+          <td>{{ u.userAccountStatus }}</td>
+          <td>{{ u.roleName }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </div>
-  <div class="col">
-    <div class="card">
-      <img src="{{ url_for('static', filename='uploads/user/personalprogress.jpg') }}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Tu progreso</h5>
-        <p class="card-text">Te ayudamos con un resumen de las metas que has conseguido junto a nosotros</p>
-            <a href="{{ url_for ('userDb.user_progress') }}" class="btn btn-primary">¡Vamos!</a>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="{{ url_for('static', filename='uploads/user/Personal-Goals.jpg') }}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Tus metas</h5>
-        <p class="card-text">Los objetivos que te has propuesto y que mindset te ayudará a cumplirlos</p>
-            <a href="{{ url_for ('userDb.user_goals') }}" class="btn btn-primary">¡Vamos!</a>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="{{ url_for('static', filename='uploads/user/reminder.avif') }}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Tus Notificaciones</h5>
-        <p class="card-text">Mantente en sintonía con tus objetivos. Aquí encontrarás todos tus recordatorios para que nada se te escape.</p>
-            <a href="{{ url_for ('userDb.user_reminders') }}" class="btn btn-primary">¡Vamos!</a>
-      </div>
-    </div>
-  </div>
-</div>
   </main>
 
     <footer>
